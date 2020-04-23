@@ -26,7 +26,7 @@ class ProfileViewModelTests: XCTestCase {
 
     func testFullNameConstruction() {
         // Arrange
-        let sut = ProfileViewModel(profile: profile)
+        let sut = ProfileViewModelData(profile: profile)
         
         // Act
         // Assert
@@ -35,7 +35,7 @@ class ProfileViewModelTests: XCTestCase {
     
     func testSubtitleConstruction() {
         // Arrange
-        let sut = ProfileViewModel(profile: profile)
+        let sut = ProfileViewModelData(profile: profile)
         
         // Act
         // Assert
@@ -44,7 +44,7 @@ class ProfileViewModelTests: XCTestCase {
     
     func testLinkedInUrlMatches() {
         // Arrange
-        let sut = ProfileViewModel(profile: profile)
+        let sut = ProfileViewModelData(profile: profile)
         
         // Act
         // Assert
