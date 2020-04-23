@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF74227B2451B809001ABDA1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74227A2451B809001ABDA1 /* ProfileViewModel.swift */; };
+		AF74227D2451B9F3001ABDA1 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74227C2451B9F3001ABDA1 /* ProfileViewModelTests.swift */; };
 		AFB4FF1524518F9000F86714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1424518F9000F86714 /* AppDelegate.swift */; };
 		AFB4FF1724518F9000F86714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1624518F9000F86714 /* SceneDelegate.swift */; };
 		AFB4FF1924518F9000F86714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1824518F9000F86714 /* ProfileViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		AF74227A2451B809001ABDA1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AF74227C2451B9F3001ABDA1 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		AFB4FF1124518F9000F86714 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB4FF1424518F9000F86714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB4FF1624518F9000F86714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				AFB4FF1824518F9000F86714 /* ProfileViewController.swift */,
 				AF74227A2451B809001ABDA1 /* ProfileViewModel.swift */,
+				AF74227C2451B9F3001ABDA1 /* ProfileViewModelTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF74227D2451B9F3001ABDA1 /* ProfileViewModelTests.swift in Sources */,
 				AFB4FF2C24518F9300F86714 /* cvTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
