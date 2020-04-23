@@ -18,6 +18,7 @@
 		AF74228B2451D1AF001ABDA1 /* ExperienceDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74228A2451D1AF001ABDA1 /* ExperienceDao.swift */; };
 		AF74228D2451D211001ABDA1 /* experience.json in Resources */ = {isa = PBXBuildFile; fileRef = AF74228C2451D211001ABDA1 /* experience.json */; };
 		AF74228F2451D551001ABDA1 /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74228E2451D551001ABDA1 /* ExperienceViewModel.swift */; };
+		AF7422912451DD45001ABDA1 /* ExperienceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422902451DD45001ABDA1 /* ExperienceViewModelTests.swift */; };
 		AFB4FF1524518F9000F86714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1424518F9000F86714 /* AppDelegate.swift */; };
 		AFB4FF1724518F9000F86714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1624518F9000F86714 /* SceneDelegate.swift */; };
 		AFB4FF1924518F9000F86714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1824518F9000F86714 /* ProfileViewController.swift */; };
@@ -59,6 +60,7 @@
 		AF74228A2451D1AF001ABDA1 /* ExperienceDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDao.swift; sourceTree = "<group>"; };
 		AF74228C2451D211001ABDA1 /* experience.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = experience.json; sourceTree = "<group>"; };
 		AF74228E2451D551001ABDA1 /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
+		AF7422902451DD45001ABDA1 /* ExperienceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModelTests.swift; sourceTree = "<group>"; };
 		AFB4FF1124518F9000F86714 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB4FF1424518F9000F86714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB4FF1624518F9000F86714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				AFB4FF4724519CDD00F86714 /* ExperienceTableViewController.swift */,
 				AF7422882451CB1A001ABDA1 /* ExperienceTableViewCell.swift */,
 				AF74228E2451D551001ABDA1 /* ExperienceViewModel.swift */,
+				AF7422902451DD45001ABDA1 /* ExperienceViewModelTests.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF74227D2451B9F3001ABDA1 /* ProfileViewModelTests.swift in Sources */,
+				AF7422912451DD45001ABDA1 /* ExperienceViewModelTests.swift in Sources */,
 				AFB4FF2C24518F9300F86714 /* cvTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

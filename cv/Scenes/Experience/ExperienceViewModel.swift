@@ -18,7 +18,7 @@ enum ExperienceViewModel {
 
 struct ExperienceViewModelData {
     let companyName: String
-    let companyLogo: UIImage
+    let companyLogo: UIImage?
     let position: String
     let periodDescription: String
 }
@@ -32,7 +32,7 @@ extension ExperienceViewModelData {
         let desc = "\(from) - \(to)"
         
         self.init(companyName: experience.companyName,
-                  companyLogo: UIImage(named: experience.companyLogoName)!,
+                  companyLogo: UIImage(named: experience.companyLogoName),
                   position: experience.position,
                   periodDescription: desc)
     }

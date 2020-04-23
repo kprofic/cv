@@ -50,7 +50,6 @@ class ExperienceTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExpRow", for: indexPath) as! ExperienceTableViewCell
         let exp = exps[indexPath.row]
         
-        // todo load from url
         cell.companyLogoImageView.image = exp.companyLogo
         cell.companyNameLabel.text = exp.companyName
         cell.positionLabel.text = exp.position

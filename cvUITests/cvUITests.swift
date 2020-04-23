@@ -32,7 +32,7 @@ class cvUITests: XCTestCase {
         let sut = app.staticTexts["fullname"]
         
         // Assert
-        XCTAssert(sut.waitForExistence(timeout: 1))
+        XCTAssert(sut.waitForExistence(timeout: 2))
     }
     
 
