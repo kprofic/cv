@@ -22,4 +22,18 @@ struct LocalDataManager: DaoFacade {
             }
         }
     }
+    
+    func readExperience(completion: @escaping (Result<[Experience], Error>) -> Void) {
+        DispatchQueue.global().async {
+            let url = Bundle.main.url(forResource: "experience", withExtension: "json")!
+            let localData = try! Data(contentsOf: url)
+          
+            do {
+                let exp = try JSONDecoder().decode(Array<Experience>.self, from: localData)
+                completion(.success(exp))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+    }
 }

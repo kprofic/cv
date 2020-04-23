@@ -13,6 +13,10 @@
 		AF7422812451BC90001ABDA1 /* ProfileDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422802451BC90001ABDA1 /* ProfileDao.swift */; };
 		AF7422832451BD1C001ABDA1 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422822451BD1C001ABDA1 /* LocalDataManager.swift */; };
 		AF7422852451BD4C001ABDA1 /* DaoFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422842451BD4C001ABDA1 /* DaoFacade.swift */; };
+		AF7422872451C9E1001ABDA1 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422862451C9E1001ABDA1 /* Experience.swift */; };
+		AF7422892451CB1A001ABDA1 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7422882451CB1A001ABDA1 /* ExperienceTableViewCell.swift */; };
+		AF74228B2451D1AF001ABDA1 /* ExperienceDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74228A2451D1AF001ABDA1 /* ExperienceDao.swift */; };
+		AF74228D2451D211001ABDA1 /* experience.json in Resources */ = {isa = PBXBuildFile; fileRef = AF74228C2451D211001ABDA1 /* experience.json */; };
 		AFB4FF1524518F9000F86714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1424518F9000F86714 /* AppDelegate.swift */; };
 		AFB4FF1724518F9000F86714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1624518F9000F86714 /* SceneDelegate.swift */; };
 		AFB4FF1924518F9000F86714 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF1824518F9000F86714 /* ProfileViewController.swift */; };
@@ -49,6 +53,10 @@
 		AF7422802451BC90001ABDA1 /* ProfileDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDao.swift; sourceTree = "<group>"; };
 		AF7422822451BD1C001ABDA1 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		AF7422842451BD4C001ABDA1 /* DaoFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoFacade.swift; sourceTree = "<group>"; };
+		AF7422862451C9E1001ABDA1 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		AF7422882451CB1A001ABDA1 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		AF74228A2451D1AF001ABDA1 /* ExperienceDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDao.swift; sourceTree = "<group>"; };
+		AF74228C2451D211001ABDA1 /* experience.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = experience.json; sourceTree = "<group>"; };
 		AFB4FF1124518F9000F86714 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB4FF1424518F9000F86714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB4FF1624518F9000F86714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB4FF4724519CDD00F86714 /* ExperienceTableViewController.swift */,
+				AF7422882451CB1A001ABDA1 /* ExperienceTableViewCell.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 				AFB4FF1F24518F9300F86714 /* LaunchScreen.storyboard */,
 				AFB4FF2224518F9300F86714 /* Info.plist */,
 				AF74227E2451BC0C001ABDA1 /* profile.json */,
+				AF74228C2451D211001ABDA1 /* experience.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				AF7422802451BC90001ABDA1 /* ProfileDao.swift */,
 				AF7422842451BD4C001ABDA1 /* DaoFacade.swift */,
 				AF7422822451BD1C001ABDA1 /* LocalDataManager.swift */,
+				AF7422862451C9E1001ABDA1 /* Experience.swift */,
+				AF74228A2451D1AF001ABDA1 /* ExperienceDao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB4FF2124518F9300F86714 /* LaunchScreen.storyboard in Resources */,
+				AF74228D2451D211001ABDA1 /* experience.json in Resources */,
 				AF74227F2451BC0C001ABDA1 /* profile.json in Resources */,
 				AFB4FF1E24518F9300F86714 /* Assets.xcassets in Resources */,
 				AFB4FF1C24518F9000F86714 /* Main.storyboard in Resources */,
@@ -327,8 +340,11 @@
 				AF74227B2451B809001ABDA1 /* ProfileViewModel.swift in Sources */,
 				AF7422832451BD1C001ABDA1 /* LocalDataManager.swift in Sources */,
 				AFB4FF4E2451A17000F86714 /* Profile.swift in Sources */,
+				AF7422872451C9E1001ABDA1 /* Experience.swift in Sources */,
 				AF7422812451BC90001ABDA1 /* ProfileDao.swift in Sources */,
 				AFB4FF1924518F9000F86714 /* ProfileViewController.swift in Sources */,
+				AF74228B2451D1AF001ABDA1 /* ExperienceDao.swift in Sources */,
+				AF7422892451CB1A001ABDA1 /* ExperienceTableViewCell.swift in Sources */,
 				AF7422852451BD4C001ABDA1 /* DaoFacade.swift in Sources */,
 				AFB4FF4824519CDD00F86714 /* ExperienceTableViewController.swift in Sources */,
 				AFB4FF1524518F9000F86714 /* AppDelegate.swift in Sources */,

@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol DaoFacade: ProfileDao { }
+protocol DaoFacade: ProfileDao, ExperienceDao { }
