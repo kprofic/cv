@@ -8,21 +8,18 @@
 
 import Foundation
 
-
-
 struct LocalDataManager: DaoFacade {
     func readProfile(completion: @escaping (Result<Profile, Error>) -> Void) {
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(800)) {
-          let profile = Profile(firstName: "Krzysztof",
-          lastName: "Profic",
-          positionName: "Senior iOS Developer",
-          experience: 9,
-          linkedInUrl: URL(string: "https://www.linkedin.com/in/krzysztof-profic-b73b4421/")!)
+        DispatchQueue.global().async {
+            let url = Bundle.main.url(forResource: "profile", withExtension: "json")!
+            let localProfileData = try! Data(contentsOf: url)
           
-          completion(.success(profile))
-
+            do {
+                let profile = try JSONDecoder().decode(Profile.self, from: localProfileData)
+                completion(.success(profile))
+            } catch {
+                completion(.failure(error))
+            }
         }
-
     }
 }

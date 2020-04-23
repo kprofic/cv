@@ -23,8 +23,7 @@ class ProfileViewController: UIViewController {
             guard let vm = viewModel else { return }
          
             OperationQueue.main.addOperation {
-                
-                UIView.transition(with: self.view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                UIView.transition(with: self.view, duration: 0.6, options: .transitionCrossDissolve, animations: {
                     self.fullnameLabel.text = vm.fullname
                     self.subtitleLabel.text = vm.subtitle
                     self.avatarImageView.alpha = 1
@@ -35,6 +34,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         profileDao.readProfile { [weak self] result in
             switch result {
