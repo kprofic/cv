@@ -7,5 +7,5 @@
 //
 
 protocol ProfileDao {
-    func readProfile(completion: (Result<Profile, Error>) -> Void)
+    func readProfile(completion: @escaping (Result<Profile, Error>) -> Void)
 }

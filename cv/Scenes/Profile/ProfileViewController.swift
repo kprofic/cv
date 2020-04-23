@@ -9,8 +9,11 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    // INFO
+    // this should be injected for proper DI
     let profileDao: ProfileDao = LocalDataManager()
     
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var linkedInButton: UIButton!
@@ -20,8 +23,12 @@ class ProfileViewController: UIViewController {
             guard let vm = viewModel else { return }
          
             OperationQueue.main.addOperation {
-                self.fullnameLabel.text = vm.fullname
-                self.subtitleLabel.text = vm.subtitle
+                
+                UIView.transition(with: self.view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                    self.fullnameLabel.text = vm.fullname
+                    self.subtitleLabel.text = vm.subtitle
+                    self.avatarImageView.alpha = 1
+                })
             }
         }
     }

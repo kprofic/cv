@@ -116,13 +116,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Mhw-ga-gGR">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DsS-Vc-0NT">
+                                <rect key="frame" x="197" y="237.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Mhw-ga-gGR">
                                 <rect key="frame" x="103.5" y="144" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Mhw-ga-gGR" secondAttribute="height" multiplier="1:1" id="lRK-uL-YUx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Profic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-3j-WQb" userLabel="fullname">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-3j-WQb" userLabel="fullname">
                                 <rect key="frame" x="0.0" y="401" width="414" height="43"/>
                                 <accessibility key="accessibilityConfiguration" identifier="fullname" label="fullname"/>
                                 <constraints>
@@ -132,8 +135,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
-                                <rect key="frame" x="132.5" y="484" width="149" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
+                                <rect key="frame" x="207" y="484" width="0.0" height="0.0"/>
                                 <accessibility key="accessibilityConfiguration" identifier="profile.subtitle"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,9 +168,11 @@
                             <constraint firstItem="Awz-fR-syE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AZT-PW-hCi"/>
                             <constraint firstItem="Tb6-iR-Eeg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OGb-HS-EcR"/>
                             <constraint firstItem="Awz-fR-syE" firstAttribute="top" secondItem="6CA-3j-WQb" secondAttribute="bottom" constant="40" id="SPJ-1t-9aF"/>
+                            <constraint firstItem="DsS-Vc-0NT" firstAttribute="centerY" secondItem="Mhw-ga-gGR" secondAttribute="centerY" id="U9B-xo-L17"/>
                             <constraint firstItem="6CA-3j-WQb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="faa-if-4rP"/>
                             <constraint firstItem="Awz-fR-syE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjg-8Z-YUI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tb6-iR-Eeg" secondAttribute="bottom" constant="121" id="qj5-74-1Fj"/>
+                            <constraint firstItem="DsS-Vc-0NT" firstAttribute="centerX" secondItem="Mhw-ga-gGR" secondAttribute="centerX" id="sjC-RG-LMa"/>
                             <constraint firstItem="Mhw-ga-gGR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="syO-Mh-bw6"/>
                             <constraint firstItem="6CA-3j-WQb" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="vDL-iy-XuI"/>
                             <constraint firstItem="6CA-3j-WQb" firstAttribute="top" secondItem="Mhw-ga-gGR" secondAttribute="bottom" constant="50" id="xBI-QG-iWX"/>
@@ -176,6 +181,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Acg-lW-LxA"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="Mhw-ga-gGR" id="tcp-Mh-1xz"/>
                         <outlet property="fullnameLabel" destination="6CA-3j-WQb" id="05a-hk-ewf"/>
                         <outlet property="linkedInButton" destination="Tb6-iR-Eeg" id="JZr-lm-YkQ"/>
                         <outlet property="subtitleLabel" destination="Awz-fR-syE" id="vRR-t1-wcu"/>

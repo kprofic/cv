@@ -11,13 +11,18 @@ import Foundation
 
 
 struct LocalDataManager: DaoFacade {
-    func readProfile(completion: (Result<Profile, Error>) -> Void) {
-        let profile = Profile(firstName: "Krzysztof",
-        lastName: "Profic",
-        positionName: "Senior iOS Developer",
-        experience: 9,
-        linkedInUrl: URL(string: "https://www.linkedin.com/in/krzysztof-profic-b73b4421/")!)
+    func readProfile(completion: @escaping (Result<Profile, Error>) -> Void) {
         
-        completion(.success(profile))
+        DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(800)) {
+          let profile = Profile(firstName: "Krzysztof",
+          lastName: "Profic",
+          positionName: "Senior iOS Developer",
+          experience: 9,
+          linkedInUrl: URL(string: "https://www.linkedin.com/in/krzysztof-profic-b73b4421/")!)
+          
+          completion(.success(profile))
+
+        }
+
     }
 }
