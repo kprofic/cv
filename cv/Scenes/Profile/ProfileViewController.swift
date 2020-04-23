@@ -41,14 +41,25 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        startLoadingData()
+    }
+    
+    @IBAction func linkedInButtonTapped(_ sender: Any) {
+        guard case .loaded(let vm) = viewModel else { return }
+        
+        UIApplication.shared.open(vm.linkedInURL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func viewTapped(_ sender: Any) {
+        startLoadingData()
+    }
+    
+    // MARK: Private
+    
+    func startLoadingData(){
         viewModel = .loading
         profileDao.readProfile { [weak self] result in
             switch result {
@@ -59,12 +70,6 @@ class ProfileViewController: UIViewController {
                 self?.viewModel = .failed(message: NSLocalizedString("Can't load profile, tap to try again...", comment: ""))
             }
         }
-    }
-    
-    @IBAction func linkedInButtonTapped(_ sender: Any) {
-        guard case .loaded(let vm) = viewModel else { return }
-        
-        UIApplication.shared.open(vm.linkedInURL, options: [:], completionHandler: nil)
     }
 }
 

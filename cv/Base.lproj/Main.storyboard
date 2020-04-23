@@ -162,6 +162,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Mhw-ga-gGR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="6Z7-DD-fRr"/>
                             <constraint firstItem="Mhw-ga-gGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7jq-xt-OP5"/>
@@ -178,6 +179,9 @@
                             <constraint firstItem="6CA-3j-WQb" firstAttribute="top" secondItem="Mhw-ga-gGR" secondAttribute="bottom" constant="50" id="xBI-QG-iWX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GxV-au-NgK" appends="YES" id="Yfg-oL-yiM"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Acg-lW-LxA"/>
                     <connections>
@@ -188,6 +192,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GxV-au-NgK">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="6I9-uN-E4n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-487" y="-626"/>
         </scene>
