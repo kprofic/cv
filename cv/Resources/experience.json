@@ -1,14 +1,37 @@
 [
     {
         "companyName": "Talixo",
+        "companyLogoName": "talixo",
         "position": "iOS Tech Lead",
         "dateStarted": "2017-08-01T00:00:00Z",
         "dateFinished": null
     },
     {
         "companyName": "IG",
+        "companyLogoName": "ig",
         "position": "Senior iOS Developer",
-        "dateStarted": "2015-08-01T00:00:00Z",
-        "dateFinished": "2017-08-01T00:00:00Z",
+        "dateStarted": "2016-11-01T00:00:00Z",
+        "dateFinished": "2017-07-31T00:00:00Z",
+    },
+    {
+        "companyName": "William-Hill",
+        "companyLogoName": "wh",
+        "position": "Senior iOS Contractor",
+        "dateStarted": "2015-02-01T00:00:00Z",
+        "dateFinished": "2015-12-31T00:00:00Z",
+    },
+    {
+        "companyName": "Trifork AS",
+        "companyLogoName": "trifork",
+        "position": "Senior iOS Engineer",
+        "dateStarted": "2012-09-01T00:00:00Z",
+        "dateFinished": "2016-09-30T00:00:00Z",
+    },
+    {
+        "companyName": "Mobile Experts",
+        "companyLogoName": "me",
+        "position": "Software Engineer",
+        "dateStarted": "2011-03-01T00:00:00Z",
+        "dateFinished": "2012-08-31T00:00:00Z",
     },
 ]

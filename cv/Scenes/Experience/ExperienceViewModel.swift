@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ExperienceViewModel {
     case idle
@@ -17,6 +18,7 @@ enum ExperienceViewModel {
 
 struct ExperienceViewModelData {
     let companyName: String
+    let companyLogo: UIImage
     let position: String
     let periodDescription: String
 }
@@ -29,7 +31,10 @@ extension ExperienceViewModelData {
         let to = experience.dateFinished.flatMap(dateFormatter.string(from:)) ?? "Present"
         let desc = "\(from) - \(to)"
         
-        self.init(companyName: experience.companyName, position: experience.position, periodDescription: desc)
+        self.init(companyName: experience.companyName,
+                  companyLogo: UIImage(named: experience.companyLogoName)!,
+                  position: experience.position,
+                  periodDescription: desc)
     }
     
     static func from(experiences: [Experience]) -> [ExperienceViewModelData] {

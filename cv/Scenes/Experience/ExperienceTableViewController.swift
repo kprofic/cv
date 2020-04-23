@@ -51,7 +51,7 @@ class ExperienceTableViewController: UITableViewController {
         let exp = exps[indexPath.row]
         
         // todo load from url
-        cell.companyLogoImageView.image = UIImage(named: "talixo")
+        cell.companyLogoImageView.image = exp.companyLogo
         cell.companyNameLabel.text = exp.companyName
         cell.positionLabel.text = exp.position
         cell.timeDescriptionLabel.text = exp.periodDescription

@@ -10,6 +10,7 @@ import Foundation
 
 struct Experience: Codable {
     let companyName: String
+    let companyLogoName: String
     let position: String
     let dateStarted: Date
     let dateFinished: Date?
