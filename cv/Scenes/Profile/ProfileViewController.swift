@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    let profileDao: ProfileDao = LocalDataManager()
+    
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var linkedInButton: UIButton!
@@ -16,22 +18,25 @@ class ProfileViewController: UIViewController {
     var viewModel: ProfileViewModel? {
         didSet {
             guard let vm = viewModel else { return }
-            
-            fullnameLabel.text = vm.fullname
-            subtitleLabel.text = vm.subtitle
+         
+            OperationQueue.main.addOperation {
+                self.fullnameLabel.text = vm.fullname
+                self.subtitleLabel.text = vm.subtitle
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let profile = Profile(firstName: "Krzysztof",
-                               lastName: "Profic",
-                               positionName: "Senior iOS Developer",
-                               experience: 9,
-                               linkedInUrl: URL(string: "https://www.linkedin.com/in/krzysztof-profic-b73b4421/")!)
-        
-        self.viewModel = ProfileViewModel(profile: profile)
+        profileDao.readProfile { [weak self] result in
+            switch result {
+            case .success(let profile):
+                self?.viewModel = ProfileViewModel(profile: profile)
+            case .failure(let error ):
+                print("Error occured \(error)")
+            }
+        }
     }
     
     @IBAction func linkedInButtonTapped(_ sender: Any) {
