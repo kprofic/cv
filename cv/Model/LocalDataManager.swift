@@ -29,7 +29,9 @@ struct LocalDataManager: DaoFacade {
             let localData = try! Data(contentsOf: url)
           
             do {
-                let exp = try JSONDecoder().decode(Array<Experience>.self, from: localData)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let exp = try decoder.decode(Array<Experience>.self, from: localData)
                 completion(.success(exp))
             } catch {
                 completion(.failure(error))

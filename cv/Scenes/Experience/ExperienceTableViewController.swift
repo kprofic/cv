@@ -22,22 +22,23 @@ class ExperienceTableViewController: UITableViewController {
     
     var model: [Experience] = [] {
         didSet {
-            tableView.reloadData()
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
+            }
         }
     }
     // MARK: - Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        
-        model = [
-            Experience(companyName: "Talixo", position: "iOS Tech Lead", dateStarted: dateFormatter.date(from: "2017-08-01T00:00:00Z")!, dateFinished: nil),
-            Experience(companyName: "IG", position: "Senior iOS Developer", dateStarted: dateFormatter.date(from: "2016-08-01T00:00:00Z")!, dateFinished: dateFormatter.date(from: "2017-08-01T00:00:00Z")!),
-            Experience(companyName: "William Hill", position: "Senior iOS Contractor",dateStarted: dateFormatter.date(from: "2012-08-01T00:00:00Z")!, dateFinished: dateFormatter.date(from: "2016-08-01T00:00:00Z")!)
-        ]
+        experienceDao.readExperience { [weak self] result in
+            switch result {
+            case .success(let experience):
+                self?.model = experience
+            case .failure(let error ):
+                print("Error loading experience: \(error)")
+            }
+        }
     }
     
     // MARK: - Table view data source
