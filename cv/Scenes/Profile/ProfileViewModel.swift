@@ -8,14 +8,21 @@
 
 import Foundation
 
-struct ProfileViewModel {
+enum ProfileViewModel {
+    case idle
+    case loading
+    case loaded(profile: ProfileViewModelData)
+    case failed(message: String)
+}
+
+struct ProfileViewModelData {
     let fullname: String
     let subtitle: String
     let linkedInURL: URL
 }
 
 // Adapter from model to view-model
-extension ProfileViewModel {
+extension ProfileViewModelData {
     init(profile: Profile) {
         // INFO - localized strings to be added for app handling more than one language
         

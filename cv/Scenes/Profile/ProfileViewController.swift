@@ -18,16 +18,25 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var linkedInButton: UIButton!
     
-    var viewModel: ProfileViewModel? {
+    var viewModel: ProfileViewModel = .idle {
         didSet {
-            guard let vm = viewModel else { return }
-         
             OperationQueue.main.addOperation {
-                UIView.transition(with: self.view, duration: 0.6, options: .transitionCrossDissolve, animations: {
-                    self.fullnameLabel.text = vm.fullname
-                    self.subtitleLabel.text = vm.subtitle
-                    self.avatarImageView.alpha = 1
-                })
+                switch self.viewModel {
+                case .idle, .loading:
+                    break
+                case .failed(let message):
+                    let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""),
+                                                  message: message,
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.show(alert, sender: nil)
+                case .loaded(let vm):
+                    UIView.transition(with: self.view, duration: 0.6, options: .transitionCrossDissolve, animations: {
+                        self.fullnameLabel.text = vm.fullname
+                        self.subtitleLabel.text = vm.subtitle
+                        self.avatarImageView.alpha = 1
+                    })
+                }
             }
         }
     }
@@ -40,20 +49,22 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        viewModel = .loading
         profileDao.readProfile { [weak self] result in
             switch result {
             case .success(let profile):
-                self?.viewModel = ProfileViewModel(profile: profile)
+                self?.viewModel = .loaded(profile: ProfileViewModelData(profile: profile))
             case .failure(let error ):
-                print("Error occured \(error)")
+                print("Error loading profile: \(error)")
+                self?.viewModel = .failed(message: NSLocalizedString("Can't load profile, tap to try again...", comment: ""))
             }
         }
     }
     
     @IBAction func linkedInButtonTapped(_ sender: Any) {
-        guard let profileUrl = viewModel?.linkedInURL else { return }
+        guard case .loaded(let vm) = viewModel else { return }
         
-        UIApplication.shared.open(profileUrl, options: [:], completionHandler: nil)
+        UIApplication.shared.open(vm.linkedInURL, options: [:], completionHandler: nil)
     }
 }
 
