@@ -144,6 +144,9 @@
                                     <constraint firstAttribute="width" constant="171" id="j6V-nt-PyK"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="linked"/>
+                                <connections>
+                                    <action selector="linkedInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tY1-xd-WKC"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTi-IN-hdE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>

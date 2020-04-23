@@ -31,5 +31,11 @@ class ProfileViewController: UIViewController {
                             experience: 9,
                             linkedInUrl: URL(string: "https://www.linkedin.com/in/krzysztof-profic-b73b4421/")!)
     }
+    
+    @IBAction func linkedInButtonTapped(_ sender: Any) {
+        guard let profileUrl = viewModel?.linkedInUrl else { return }
+        
+        UIApplication.shared.open(profileUrl, options: [:], completionHandler: nil)
+    }
 }
 
