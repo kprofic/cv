@@ -24,22 +24,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talixo" translatesAutoresizingMaskIntoConstraints="NO" id="gyZ-ry-5y0">
-                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                            <rect key="frame" x="10" y="10" width="200" height="200"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="iOS Tech Lead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-xP-auK">
-                                            <rect key="frame" x="118" y="20" width="276" height="29"/>
+                                            <rect key="frame" x="218" y="20" width="176" height="29"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Aug 2017 - Present" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka2-vg-UMF">
-                                            <rect key="frame" x="118" y="81.5" width="276" height="24"/>
+                                            <rect key="frame" x="218" y="81.5" width="176" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="talixo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-BM-O0y">
-                                            <rect key="frame" x="118" y="52" width="276" height="26.5"/>
+                                            <rect key="frame" x="218" y="52" width="176" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -131,11 +131,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
-                                <rect key="frame" x="132.5" y="484" width="149" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="sTL-D9-v0B"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
+                                <rect key="frame" x="132.5" y="484" width="149" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -160,6 +157,7 @@
                         <constraints>
                             <constraint firstItem="Mhw-ga-gGR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="6Z7-DD-fRr"/>
                             <constraint firstItem="Mhw-ga-gGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7jq-xt-OP5"/>
+                            <constraint firstItem="Awz-fR-syE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AZT-PW-hCi"/>
                             <constraint firstItem="Tb6-iR-Eeg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OGb-HS-EcR"/>
                             <constraint firstItem="Awz-fR-syE" firstAttribute="top" secondItem="6CA-3j-WQb" secondAttribute="bottom" constant="40" id="SPJ-1t-9aF"/>
                             <constraint firstItem="6CA-3j-WQb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="faa-if-4rP"/>
@@ -172,6 +170,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Acg-lW-LxA"/>
+                    <connections>
+                        <outlet property="fullnameLabel" destination="6CA-3j-WQb" id="05a-hk-ewf"/>
+                        <outlet property="linkedInButton" destination="Tb6-iR-Eeg" id="JZr-lm-YkQ"/>
+                        <outlet property="subtitleLabel" destination="Awz-fR-syE" id="vRR-t1-wcu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

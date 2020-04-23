@@ -103,6 +103,7 @@
 		AFB4FF1324518F9000F86714 /* cv */ = {
 			isa = PBXGroup;
 			children = (
+				AFB4FF1A24518F9000F86714 /* Main.storyboard */,
 				AFB4FF4F2451A28300F86714 /* Model */,
 				AFB4FF1424518F9000F86714 /* AppDelegate.swift */,
 				AFB4FF4B2451A0CF00F86714 /* Scenes */,
@@ -149,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				AFB4FF1624518F9000F86714 /* SceneDelegate.swift */,
-				AFB4FF1A24518F9000F86714 /* Main.storyboard */,
 				AFB4FF4A2451A0C000F86714 /* Experience */,
 				AFB4FF492451A0B700F86714 /* Profile */,
 			);
