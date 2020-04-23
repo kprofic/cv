@@ -8,19 +8,10 @@
 
 import UIKit
 
-let dateFormatter: DateFormatter = {
-    let df = DateFormatter()
-    df.timeStyle = .none
-    df.dateStyle = .medium
-    return df
-}()
-
-
-
 class ExperienceTableViewController: UITableViewController {
     let experienceDao: ExperienceDao = LocalDataManager()
     
-    var model: [Experience] = [] {
+    var model: ExperienceViewModel = .idle {
         didSet {
             OperationQueue.main.addOperation {
                 self.tableView.reloadData()
@@ -33,8 +24,8 @@ class ExperienceTableViewController: UITableViewController {
         
         experienceDao.readExperience { [weak self] result in
             switch result {
-            case .success(let experience):
-                self?.model = experience
+            case .success(let experiences):
+                self?.model = .loaded(experience: ExperienceViewModelData.from(experiences: experiences))
             case .failure(let error ):
                 print("Error loading experience: \(error)")
             }
@@ -48,20 +39,22 @@ class ExperienceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.count
+        guard case .loaded(let exps) = model else { return 0 }
+        
+        return exps.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpRow", for: indexPath) as! ExperienceTableViewCell
-        let exp = model[indexPath.row]
+        guard case .loaded(let exps) = model else { fatalError() }
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpRow", for: indexPath) as! ExperienceTableViewCell
+        let exp = exps[indexPath.row]
+        
+        // todo load from url
         cell.companyLogoImageView.image = UIImage(named: "talixo")
         cell.companyNameLabel.text = exp.companyName
         cell.positionLabel.text = exp.position
-        
-        let from = dateFormatter.string(from: exp.dateStarted)
-        let to = exp.dateFinished.flatMap(dateFormatter.string(from:)) ?? "Present"
-        cell.timeDescriptionLabel.text = "\(from) - \(to)"
+        cell.timeDescriptionLabel.text = exp.periodDescription
 
         return cell
     }
