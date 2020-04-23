@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cv" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Mhw-ga-gGR">
+                                <rect key="frame" x="103.5" y="144" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mhw-ga-gGR" secondAttribute="height" multiplier="1:1" id="lRK-uL-YUx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Profic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-3j-WQb">
+                                <rect key="frame" x="0.0" y="401" width="414" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="a3O-rW-FBq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
+                                <rect key="frame" x="132.5" y="484" width="149" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="sTL-D9-v0B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb6-iR-Eeg">
+                                <rect key="frame" x="121.5" y="688" width="171" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Kbz-kb-B6I"/>
+                                    <constraint firstAttribute="width" constant="171" id="j6V-nt-PyK"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="linked"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mhw-ga-gGR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="6Z7-DD-fRr"/>
+                            <constraint firstItem="Mhw-ga-gGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7jq-xt-OP5"/>
+                            <constraint firstItem="Tb6-iR-Eeg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OGb-HS-EcR"/>
+                            <constraint firstItem="Awz-fR-syE" firstAttribute="top" secondItem="6CA-3j-WQb" secondAttribute="bottom" constant="40" id="SPJ-1t-9aF"/>
+                            <constraint firstItem="6CA-3j-WQb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="faa-if-4rP"/>
+                            <constraint firstItem="Awz-fR-syE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjg-8Z-YUI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tb6-iR-Eeg" secondAttribute="bottom" constant="121" id="qj5-74-1Fj"/>
+                            <constraint firstItem="Mhw-ga-gGR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="syO-Mh-bw6"/>
+                            <constraint firstItem="6CA-3j-WQb" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="vDL-iy-XuI"/>
+                            <constraint firstItem="6CA-3j-WQb" firstAttribute="top" secondItem="Mhw-ga-gGR" secondAttribute="bottom" constant="50" id="xBI-QG-iWX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="918" height="914"/>
+        <image name="linked" width="1511" height="475"/>
+    </resources>
 </document>
