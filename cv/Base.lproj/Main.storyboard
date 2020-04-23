@@ -122,8 +122,9 @@
                                     <constraint firstAttribute="width" secondItem="Mhw-ga-gGR" secondAttribute="height" multiplier="1:1" id="lRK-uL-YUx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Profic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-3j-WQb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krzysztof Profic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-3j-WQb" userLabel="fullname">
                                 <rect key="frame" x="0.0" y="401" width="414" height="43"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fullname" label="fullname"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="a3O-rW-FBq"/>
                                 </constraints>
@@ -133,6 +134,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-fR-syE">
                                 <rect key="frame" x="132.5" y="484" width="149" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="profile.subtitle"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

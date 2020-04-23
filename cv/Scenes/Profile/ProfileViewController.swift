@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
         didSet {
             guard let vm = viewModel else { return }
             
+            // INFO - localized strings to be added for app handling more than one language
             fullnameLabel.text = vm.firstName + " " + vm.lastName
             subtitleLabel.text = vm.positionName + " with \(vm.experience) years of experience"
         }
