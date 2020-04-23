@@ -16,6 +16,7 @@
 		AFB4FF2C24518F9300F86714 /* cvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF2B24518F9300F86714 /* cvTests.swift */; };
 		AFB4FF3724518F9300F86714 /* cvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF3624518F9300F86714 /* cvUITests.swift */; };
 		AFB4FF4824519CDD00F86714 /* ExperienceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF4724519CDD00F86714 /* ExperienceTableViewController.swift */; };
+		AFB4FF4E2451A17000F86714 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4FF4D2451A17000F86714 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AFB4FF3624518F9300F86714 /* cvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cvUITests.swift; sourceTree = "<group>"; };
 		AFB4FF3824518F9300F86714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB4FF4724519CDD00F86714 /* ExperienceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewController.swift; sourceTree = "<group>"; };
+		AFB4FF4D2451A17000F86714 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		AFB4FF1324518F9000F86714 /* cv */ = {
 			isa = PBXGroup;
 			children = (
+				AFB4FF4F2451A28300F86714 /* Model */,
 				AFB4FF1424518F9000F86714 /* AppDelegate.swift */,
 				AFB4FF4B2451A0CF00F86714 /* Scenes */,
 				AFB4FF4C2451A0F100F86714 /* Resources */,
@@ -161,6 +164,14 @@
 				AFB4FF2224518F9300F86714 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFB4FF4F2451A28300F86714 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFB4FF4D2451A17000F86714 /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB4FF4E2451A17000F86714 /* Profile.swift in Sources */,
 				AFB4FF1924518F9000F86714 /* ProfileViewController.swift in Sources */,
 				AFB4FF4824519CDD00F86714 /* ExperienceTableViewController.swift in Sources */,
 				AFB4FF1524518F9000F86714 /* AppDelegate.swift in Sources */,
